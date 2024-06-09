@@ -1,0 +1,171 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+iframe {
+    width: 560px; /* Ширина iframe */
+    height: 315px; /* Высота iframe */
+}
+/* Общие стили для шапки */
+header {
+    background-color: #fffafa; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    justify-content: space-between; /* Выравнивание элементов по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+/* Стили для логотипа */
+.logo1 {
+    font-size: 24px; /* Размер шрифта логотипа */
+    font-weight: bold; /* Полужирный шрифт */
+    font-family: 'Arial Black', sans-serif; /* Красивый шрифт */
+    color: rgb(0, 0, 0); 
+}
+
+/* Стили для навигационного меню */
+nav ul1 {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    display: flex; /* Расположение элементов в строку */
+    padding: 35px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+nav ul1 li {
+    margin-right: 20px; /* Внешний отступ между пунктами меню */
+}
+
+nav ul1 li:last-child {
+    margin-right: 0; /* Убираем внешний отступ у последнего пункта меню */
+}
+
+nav ul1 li a {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+/* Стили для номера телефона */
+.phone-number {
+    font-weight: bold; /* Полужирный шрифт */
+}
+
+
+
+
+/* Главная фотография  */
+
+ /* Контейнер для фоновой картинки */
+ .background-container {
+position: relative;
+width: 100%;
+height: 90%;
+overflow: hidden;
+background-image: url('../ima/иппо.jpg');
+background-size: cover;
+background-position: center;
+
+}
+
+
+.background-container::before {
+ content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.67); /* Затемнение с прозрачностью 0.75 */
+}
+
+
+/* Контент на фоновой картинке */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    width: 38%;
+}
+
+
+  
+.image-text0 {
+ font-size: 1.2em; /* Установите желаемый размер шрифта */
+ font-family: 'Playfair Display', serif; /* Установите желаемый шрифт */
+line-height: 1.5;
+
+}
+.image-text {
+ font-size: 4em; /* Установите желаемый размер шрифта */
+ font-family: 'Montserrat', serif; /* Установите желаемый шрифт */
+font-weight: bold; /* Жирное начертание шрифта */
+
+line-height: 1.5;
+}
+.image-text2 {
+ font-size: 1em; /* Установите желаемый размер шрифта */
+font-family: 'Lato', sans-serif; /* Установите желаемый шрифт */
+
+line-height: 2;
+
+}
+.frame-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.frame {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; /* Добавляем вертикальный скроллинг */
+}
+
+
+
+
+footer {
+    background-color: black; /* Черный цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: center; /* Выравнивание элементов по горизонтали по центру */
+    border: 4px solid black; /* Черная рамка толщиной 4 пикселя */
+}
+
+/* Текстовый логотип */
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: auto; /* Размещение логотипа в левой части подвала */
+}
+/* Кнопки-картинки */
+.button {
+    width: 80px; /* Ширина кнопок */
+    height: 80px; /* Высота кнопок */
+    margin: 0 10px; /* Внешние отступы между кнопками */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+}
+/* Кнопка для возврата наверх страницы */
+.back-to-top {
+    margin-left: auto; /* Размещение кнопки в правой части подвала */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Стили для изображения кнопки */
+.back-to-top img {
+    width: 50px; /* Уменьшаем ширину изображения */
+    height: 50px; /* Уменьшаем высоту изображения */
+}
+    

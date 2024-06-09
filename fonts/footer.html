@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая страница</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: black; /* Черный цвет фона */
+            color: white; /* Белый цвет текста */
+            padding: 20px; /* Внутренние отступы */
+            display: flex; /* Расположение элементов в строку */
+            align-items: center; /* Выравнивание элементов по вертикали */
+            justify-content: center; /* Выравнивание элементов по горизонтали по центру */
+            border: 4px solid black; /* Черная рамка толщиной 4 пикселя */
+        }
+
+        /* Текстовый логотип */
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: auto; /* Размещение логотипа в левой части подвала */
+        }
+
+        /* Кнопки-картинки */
+        .button {
+            width: 80px; /* Ширина кнопок */
+            height: 80px; /* Высота кнопок */
+            margin: 0 10px; /* Внешние отступы между кнопками */
+            background-color: transparent; /* Прозрачный фон */
+            border: none; /* Убираем границу */
+            cursor: pointer; /* Изменяем курсор при наведении */
+        }
+    
+
+        /* Кнопка для возврата наверх страницы */
+        .back-to-top {
+            margin-left: auto; /* Размещение кнопки в правой части подвала */
+            background-color: transparent; /* Прозрачный фон */
+            border: none; /* Убираем границу */
+            cursor: pointer; /* Изменяем курсор при наведении */
+            padding: 0; /* Убираем внутренние отступы */
+        }
+
+        /* Стили для изображения кнопки */
+        .back-to-top img {
+            width: 50px; /* Уменьшаем ширину изображения */
+            height: 50px; /* Уменьшаем высоту изображения */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Контент страницы -->
+
+    <!-- Подвал -->
+    <footer>
+        <!-- Текстовый логотип -->
+        <div class="logo">EquiSportsHub</div>
+        
+        <!-- Кнопки-картинки -->
+        <div class="buttons">
+            <a href="https://vk.com/amuravyova3"><img src="ima/2024-03-31_13-32-16.png" alt="Button 1" class="button"></a>
+            <a href=" https://t.me/+OjFKYZ6UnZMxNWUy"><img src="ima/2024-03-31_13-33-00.png" alt="Button 2" class="button"></a>
+            <a href="https://whatsapp.com/dl/"><img src="ima/2024-03-31_13-33-30.png" alt="Button 3" class="button"></a>
+        </div>
+        
+        <!-- Кнопка для возврата наверх страницы -->
+        <button class="back-to-top"><img src="ima/i.jpg" alt="Up Arrow"></button>
+    </footer>
+    <script> 
+        // Функция для плавного скроллинга наверх
+  function scrollToTop() {
+      // Получаем текущую позицию прокрутки
+      const scrollStep = -window.scrollY / (500 / 15); // 500 - время скроллинга (в миллисекундах), 15 - скорость прокрутки
+      const scrollInterval = setInterval(function(){
+          if (window.scrollY !== 0) {
+              window.scrollBy(0, scrollStep); // Прокручиваем страницу вверх
+          } else {
+              clearInterval(scrollInterval); // Останавливаем прокрутку, когда достигнут верх страницы
+          }
+      }, 15); // Интервал скроллинга (в миллисекундах)
+  }
+
+</script>
+<script>
+function scrollToTop() {
+    // Получаем текущую позицию прокрутки
+    const scrollStep = -window.scrollY / (500 / 15); // 500 - время скроллинга (в миллисекундах), 15 - скорость прокрутки
+    const scrollInterval = setInterval(function(){
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep); // Прокручиваем страницу вверх
+        } else {
+            clearInterval(scrollInterval); // Останавливаем прокрутку, когда достигнут верх страницы
+        }
+    }, 15); // Интервал скроллинга (в миллисекундах)
+    }
+    </script>
+
+</body>
+</html>

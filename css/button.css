@@ -1,0 +1,339 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 200%;
+
+    background: linear-gradient(#afafaf, #ffffff);
+}
+iframe {
+    width: 560px; /* Ширина iframe */
+    height: 315px; /* Высота iframe */
+}
+/* Общие стили для шапки */
+header {
+    background-color: #fffafa; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    justify-content: space-between; /* Выравнивание элементов по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+/* Стили для логотипа */
+.logo {
+    font-size: 24px; /* Размер шрифта логотипа */
+    font-weight: bold; /* Полужирный шрифт */
+    font-family: 'Arial Black', sans-serif; /* Красивый шрифт */
+    color: rgb(0, 0, 0); 
+
+}
+
+/* Стили для навигационного меню */
+nav ul1 {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    display: flex; /* Расположение элементов в строку */
+    padding: 35px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+nav ul1 li {
+    margin-right: 20px; /* Внешний отступ между пунктами меню */
+}
+
+nav ul1 li:last-child {
+    margin-right: 0; /* Убираем внешний отступ у последнего пункта меню */
+}
+
+nav ul1 li a {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+/* Стили для номера телефона */
+.phone-number {
+    font-weight: bold; /* Полужирный шрифт */
+}
+
+
+/* Главная фотография  */
+ /* Контейнер для фоновой картинки */
+ .background-container {
+position: relative;
+width: 100%;
+height: 30%;
+overflow: hidden;
+background-image: url('../ima/horse.png');
+background-size: cover;
+background-position: center;
+animation: fadeInImage 2s ease infinite alternate; /* Изменена длительность на 2 секунды и добавлено мерцание */
+animation-delay: 1s; /* Задержка перед началом анимации */
+}
+@keyframes fadeInImage {
+ 0% {
+opacity: 0.9;
+}
+100% {
+   opacity: 1;
+}
+}
+
+.background-container::before {
+ content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.67); /* Затемнение с прозрачностью 0.75 */
+}
+.scroll-down {
+background-position: center bottom;
+transition: background-position 0.5s ease; /* Плавный переход */
+}
+.scroll-down-container {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
+width: 100%;
+}
+.scroll-down-arrow {
+font-size: 36px;
+color: #ffffff;
+cursor: pointer;
+}
+.scroll-down-arrow:hover {
+color: #aaaaaa;
+}
+
+
+/* Контент на фоновой картинке */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    width: 80%;
+}
+
+/* Стили для заголовка и подзаголовка */
+
+/* Стили для заголовка */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+.image-text0 {
+ font-size: 1.1em; /* Установите желаемый размер шрифта */
+ font-family: 'Playfair Display', serif; /* Установите желаемый шрифт */
+ font-style: italic; /* Курсивное начертание шрифта */
+line-height: 1.5;
+
+}
+.image-text {
+ font-size: 8em; /* Установите желаемый размер шрифта */
+ font-family: 'Montserrat', serif; /* Установите желаемый шрифт */
+font-weight: bold; /* Жирное начертание шрифта */
+ font-style: italic; /* Курсивное начертание шрифта */
+line-height: 1.5;
+}
+.image-text2 {
+ font-size: 1.3em; /* Установите желаемый размер шрифта */
+font-family: 'Lato', sans-serif; /* Установите желаемый шрифт */
+font-style: italic; /* Курсивное начертание шрифта */
+line-height: 2;
+opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s; 
+}
+
+
+
+
+.next-container {
+    display: flex; /* Расположение элементов в ряд */
+align-items: center; /* Выравнивание элементов по вертикали */
+justify-content: center; /* Выравнивание элементов по горизонтали */
+text-align: center; /* Выравнивание текста по центру внутри контейнера */
+ height: 20%; /* Высота контейнера равна высоте окна браузера */
+padding: 20px; /* Внутренние отступы */
+
+}
+
+.text-block {
+flex: 1; /* Устанавливаем ширину блока текста, чтобы он занимал доступное пространство */
+width: 100%; /* Занимаем всю доступную ширину */
+text-align: left;
+font-family: 'Arial', serif;
+font-size: 20px;
+text-indent: 20px; /* Установка красной строки на 20 пикселей */
+line-height: 1.7; /* Установка межстрочного интервала */
+
+}
+.text-block h2{
+text-align: center; /* Выравнивание заголовка по центру */
+
+
+}
+
+.image-block {
+flex-shrink: 0; /* Запрещаем изображению уменьшаться по размеру */
+margin-left: 20px; /* Внешний отступ слева от изображения */
+
+}
+
+.image-block img {
+width: 100%; /* Ширина изображения равна 100% ширины блока */
+max-width: 100%; /* Установка максимальной ширины изображения */
+height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+.horizontal-line {
+border: 0; /* Убираем стандартные границы элемента */
+height:2px; /* Толщина линии */
+background-image: linear-gradient(to right, rgba(92, 89, 89, 0) 0%, rgb(63, 61, 61) 50%, rgba(0, 0, 0, 0) 100%); /* Градиентная линия */
+margin: 20px 0; /* Отступы линии (можете изменить по вашему усмотрению) */
+}
+
+
+/* контейнер три*/
+
+.third-container {
+display: flex; /* Расположение элементов в ряд */
+align-items: center; /* Выравнивание элементов по вертикали */
+justify-content: center; /* Выравнивание элементов по горизонтали */
+height: 30%; /* Высота контейнера равна высоте окна браузера */
+padding: 20px; /* Внутренние отступы */
+text-align: center; /* Выравнивание текста по центру внутри контейнера */
+}
+
+.text-block1 {
+width: 100%; /* Занимаем всю доступную ширину */
+text-align: justify;; /* Выравнивание текста по левому краю */
+font-family: 'Arial', serif;
+font-size: 20px;
+text-indent: 50px; /* Установка красной строки на 20 пикселей */
+line-height: 1.8; /* Установка межстрочного интервала */
+word-wrap: break-word;
+padding-left: 100px; /* Отступ слева */
+margin-right: 40px; /* Отступ слева от изображения */
+}
+.text-block1 h2 {
+text-align: center; /* Выравнивание заголовка по центру */
+}
+
+.image-block1 {
+margin-top: 20px; /* Внешний отступ сверху от текста */
+
+}
+ul {
+list-style: none;
+padding-left: 0;
+}
+
+ul li:before {
+content: "";
+display: inline-block;
+width: 20px; /* Ширина изображения маркера */
+height: 20px; /* Высота изображения маркера */
+background-image: url('ima/23.png'); /* Путь к изображению утки */
+
+background-size: cover;
+margin-right: 10px; /* Отступ между маркером и текстом */
+}
+
+.image-block1 img {
+max-width: 100%; /* Ширина изображения равна ширине блока */
+height: auto; /* Автоматическая высота для сохранения пропорций */
+display: inline-block; /* Изображение отображается как блочный элемент */
+}
+
+
+/* Четвертый контейнер */
+.fourth-container {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 30%;
+padding: 20px;
+text-align: left;
+background: linear-gradient(#f0f0f0, #cccccc);
+}
+
+.text-block4 {
+flex: 1;
+font-family: 'Playfair Display', serif;
+font-size: 1.4em;
+text-indent: 50px;
+line-height: 1.7;
+margin-right: 1.1%; /* Отступ справа от текста */
+}
+.text-block4 h2 {
+text-align: center; /* Выравнивание заголовка по центру */
+}
+.image-block4 {
+margin-right: 2.3%; /* Отступ справа от изображения составляет 5% от ширины контейнера */
+}
+
+
+.image-block4 img {
+height: auto;
+max-width: 250%; /* Ширина изображения будет равна половине ширины контейнера */
+max-height: 70vh; /* Максимальная высота изображения равна высоте контейнера */
+}
+
+footer {
+    background-color: black; /* Черный цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: center; /* Выравнивание элементов по горизонтали по центру */
+    border: 4px solid black; /* Черная рамка толщиной 4 пикселя */
+}
+
+/* Текстовый логотип */
+.logo1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: auto; /* Размещение логотипа в левой части подвала */
+    color: white; /* Белый цвет текста */
+    text-decoration: none;
+}
+/* Кнопки-картинки */
+.button {
+    width: 80px; /* Ширина кнопок */
+    height: 80px; /* Высота кнопок */
+    margin: 0 10px; /* Внешние отступы между кнопками */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    margin-right: 20px;
+}
+/* Кнопка для возврата наверх страницы */
+.back-to-top {
+    margin-left: auto; /* Размещение кнопки в правой части подвала */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Стили для изображения кнопки */
+.back-to-top img {
+    width: 50px; /* Уменьшаем ширину изображения */
+    height: 50px; /* Уменьшаем высоту изображения */
+}
+    

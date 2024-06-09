@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иппотерапия</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: url('../ima/subtle-prism.svg');
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 20px;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        .faq-container {
+            margin-top: 20px;
+        }
+        .faq {
+            background-color: #f4f4f4;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .faq h3 {
+            cursor: pointer;
+        }
+        .faq-content {
+            display: none;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Иппотерапия</h1>
+    
+    <div class="section">
+        <h2>Описание</h2>
+        <p>Иппотерапия - это метод лечения и реабилитации, который использует верховую езду и взаимодействие с лошадьми для улучшения физического, эмоционального и социального благополучия. Это уникальный вид терапии, который помогает людям с различными заболеваниями и травмами.</p>
+        <img src="../ima/loshad-dlya-ippoterapii-foto.jpg" alt="Иппотерапия" class="image">
+    </div>
+    
+    <div class="section">
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="../ima/1-25.jpg" alt="Иппотерапия 1" onclick="openLightbox(this.src)">
+            <img src="../ima/maxresdefault.jpg" alt="Иппотерапия 2" onclick="openLightbox(this.src)">
+            <img src="../ima/1c47c60ec9d22d74c500a65becaa.jpg" alt="Иппотерапия 3" onclick="openLightbox(this.src)">
+            <img src="../ima/001.jfif" alt="Иппотерапия 4" onclick="openLightbox(this.src)">
+        </div>
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img id="lightboxImage" src="">
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Преимущества</h2>
+        <ul>
+            <li>Улучшение координации и баланса</li>
+            <li>Повышение мышечного тонуса</li>
+            <li>Развитие коммуникативных навыков</li>
+            <li>Уменьшение стресса и тревоги</li>
+            <li>Укрепление уверенности в себе</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Показания и противопоказания</h2>
+        <h3>Показания</h3>
+        <ul>
+            <li>Церебральный паралич</li>
+            <li>Аутизм</li>
+            <li>ДЦП</li>
+            <li>Травмы спинного мозга</li>
+            <li>Неврозы и депрессии</li>
+        </ul>
+        <h3>Противопоказания</h3>
+        <ul>
+            <li>Аллергия на лошадей</li>
+            <li>Неконтролируемая эпилепсия</li>
+            <li>Острые инфекционные заболевания</li>
+            <li>Тяжелая форма сколиоза</li>
+            <li>Сердечная недостаточность</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Методики</h2>
+        <p>В иппотерапии используются различные методики в зависимости от целей лечения. Это могут быть упражнения на лошади, такие как управление лошадью, выполнение специальных заданий и упражнений, а также терапевтические прогулки на лошади. Все занятия проводятся под контролем опытных инструкторов и медицинских специалистов.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Отзывы</h2>
+        <div class="testimonial">
+            <p><strong>Екатерина:</strong> "Мой сын начал заниматься иппотерапией полгода назад, и я вижу значительные улучшения в его координации и коммуникативных навыках. Он стал более уверенным в себе и с удовольствием посещает каждое занятие."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Александр:</strong> "После травмы спинного мозга я долго не мог вернуться к нормальной жизни. Иппотерапия помогла мне восстановить силы и вернуться к активному образу жизни. Огромное спасибо инструкторам за их профессионализм и поддержку."</p>
+        </div>
+    </div>
+    
+    <div class="section faq-container">
+        <h2>Часто задаваемые вопросы (FAQ)</h2>
+        <div class="faq">
+            <h3 onclick="toggleFaq(this)">Что такое иппотерапия?</h3>
+            <div class="faq-content">
+                <p>Иппотерапия - это метод лечения и реабилитации, который использует верховую езду и взаимодействие с лошадьми для улучшения физического, эмоционального и социального благополучия.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h3 onclick="toggleFaq(this)">Как долго длится один сеанс иппотерапии?</h3>
+            <div class="faq-content">
+                <p>Обычно один сеанс иппотерапии длится от 30 до 60 минут в зависимости от состояния пациента и программы лечения.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h3 onclick="toggleFaq(this)">Кому подходит иппотерапия?</h3>
+            <div class="faq-content">
+                <p>Иппотерапия подходит людям с различными физическими, психическими и эмоциональными нарушениями, включая ДЦП, аутизм, травмы спинного мозга, неврозы и депрессии.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      
+        function toggleFaq(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+ 
+     
+
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightboxImage').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

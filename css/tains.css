@@ -1,0 +1,352 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #e7dbdb; /* Цвет фона */
+}
+
+/* Общие стили для шапки */
+header {
+    background-color: #fffafa; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    justify-content: space-between; /* Выравнивание элементов по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+/* Стили для логотипа */
+.logo{
+    font-size: 24px; /* Размер шрифта логотипа */
+    font-weight: bold; /* Полужирный шрифт */
+    font-family: 'Arial Black', sans-serif; /* Красивый шрифт */
+    color: rgb(0, 0, 0); 
+}
+
+/* Стили для навигационного меню */
+nav ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    display: flex; /* Расположение элементов в строку */
+    padding: 35px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+nav ul li {
+    margin-right: 20px; /* Внешний отступ между пунктами меню */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Убираем внешний отступ у последнего пункта меню */
+}
+
+nav ul li a {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+/* Стили для номера телефона */
+.phone-number {
+    font-weight: bold; /* Полужирный шрифт */
+}
+
+
+/* Главная фотография  */
+ /* Контейнер для фоновой картинки */
+ .background-container {
+position: relative;
+width: 100%;
+height: 80%;
+overflow: hidden;
+background-image: url('../ima/Equestrian_sport__Horses_Run_Uniform_527175_1280x853.jpg');
+background-size: cover;
+background-position: center;
+
+}
+canvas#canvas {
+    display: block;
+  }
+
+
+.background-container::before {
+ content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8); /* Затемнение с прозрачностью 0.75 */
+}
+
+
+/* Контент на фоновой картинке */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    width: 80%;
+}
+
+/* Стили для заголовка и подзаголовка */
+
+.image-text {
+    font-size: 4.5em; /* Установите желаемый размер шрифта */
+    font-family: 'Montserrat', serif; /* Установите желаемый шрифт */
+   font-weight: bold; /* Жирное начертание шрифта */
+    font-style: italic; /* Курсивное начертание шрифта */
+   line-height: 1.5;
+   }
+
+   .image-text0 {
+    font-size: 1.3em; /* Установите желаемый размер шрифта */
+    font-family: 'Playfair Display', serif; /* Установите желаемый шрифт */
+    font-style: italic; /* Курсивное начертание шрифта */
+    line-height: 1.5;
+    text-align: center;
+    padding-left: 25%; /* Отступ слева */
+    padding-right: 25%; /* Отступ слева */
+
+    }   
+    .next-container {
+    position:relative;    
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: center; /* Выравнивание элементов по горизонтали */
+    width: 45%;
+    margin-bottom:4%;
+    padding: 20px; /* Внутренние отступы */
+    margin: 0 auto;
+    padding-left: 38%; /* Отступ слева */
+    padding-right: 17%; /* Отступ слева */
+    
+    }
+    .button1 {
+        padding: 20px 80px; /* Увеличение отступов для большего размера */
+        background-color: #a9b2dd;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 18px; /* Изменение размера шрифта */
+        font-family: Fantasy, sans-serif; /* Изменение шрифта */
+    
+      }
+  
+      /* Стили для при наведении на кнопки */
+      .button1:hover {
+        background-color: #0798f8;
+        font-size: 14px; /* Изменение размера шрифта */
+        font-family: Arial, sans-serif; /* Изменение шрифта */
+      }
+      .button1 + .button1 {
+        margin-left: 10px; /* Расстояние между кнопками */
+      }
+      .slide-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 120%;
+        height: 130%;
+        background-color: rgba(255, 255, 255, 0.9); /* Прозрачный белый фон */
+        z-index: 9999; /* Устанавливаем высокий индекс слоя, чтобы она была поверх других элементов */
+        display: none; /* Скрыть по умолчанию */
+      }
+  
+      .slide-content {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background:linear-gradient(#dee4e9,#a2c1d6); /* Прозрачный белый фон */
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 20px;
+        text-align: justify;
+        font-family: 'Montserrat', serif; /* Установите желаемый шрифт */
+
+      }
+
+
+  
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+  
+      .slide-img {
+        max-width: 70%;
+        height: auto;
+        margin-top: 20px;
+        padding-left: 20%; /* Отступ слева */
+      }
+      .slide-im {
+        max-width: 60%;
+        height: auto;
+        margin-top: 20px;
+        padding-left: 20%; /* Отступ слева */
+      }
+
+
+      
+
+
+
+
+
+
+    .text-block1 {
+    width: 50%; 
+    text-align: center;
+    padding-left: 25%; /* Отступ слева */
+    padding-right: 25%; /* Отступ слева */
+    font-size: 3em;
+    text-indent: 20px; /* Установка красной строки на 20 пикселей */
+    line-height: 1.7; /* Установка межстрочного интервала */
+    font-family: 'Odibee Sans',cursive;
+    margin-bottom:3%;
+    }
+
+    /* контейнер три*/
+
+
+    .table-contayner{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      margin-left: 25%;
+      margin-bottom:3%;
+     
+     
+  }
+
+
+    .table {
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+      font-family: 'Odibee Sans', cursive; /* Шрифт для всей таблицы */
+  }
+  .table:hover {
+      transform: scale(1.05);
+  }
+  th, td {
+      padding: 12px 20px;
+      border: 1px solid #ddd;
+      text-align: left;
+      background-color: #ffffff;
+  }
+  th {
+      background-color: #ca9b9b;
+  }
+  td {
+      transition: background-color 0.3s ease;
+  }
+  td:hover {
+      background-color: #ac7171;
+  }
+
+  /* Стили для модального окна */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+  .modal-content {
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 700px;
+      background-color: #fff;
+  }
+  .modal-content img {
+      width: 100%;
+  }
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .text-block3 {
+    width: 50%; 
+    text-align: center;
+    padding-left: 25%; /* Отступ слева */
+    padding-right: 25%; /* Отступ справа */
+    padding-bottom: 20px; /* Отступ снизу */
+    font-size: 1.5em;
+    line-height: 1.7; /* Установка межстрочного интервала */
+    font-family: 'Odibee Sans', cursive;
+    margin-bottom: 40px; /* Отступ снизу */
+}
+
+
+
+
+
+footer {
+    background-color: black; /* Черный цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: center; /* Выравнивание элементов по горизонтали по центру */
+    border: 4px solid black; /* Черная рамка толщиной 4 пикселя */
+}
+
+/* Текстовый логотип */
+.logo1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: auto; /* Размещение логотипа в левой части подвала */
+    text-decoration: none;
+    color: white; /* Белый цвет текста */
+}
+/* Кнопки-картинки */
+.button {
+    width: 80px; /* Ширина кнопок */
+    height: 80px; /* Высота кнопок */
+    margin: 0 10px; /* Внешние отступы между кнопками */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    margin-right: 20px;
+}
+/* Кнопка для возврата наверх страницы */
+.back-to-top {
+    margin-left: auto; /* Размещение кнопки в правой части подвала */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Стили для изображения кнопки */
+.back-to-top img {
+    width: 50px; /* Уменьшаем ширину изображения */
+    height: 50px; /* Уменьшаем высоту изображения */
+}
+    

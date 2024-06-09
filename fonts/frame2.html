@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра: Уход за Лошадью</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-image: url('../ima/subtle-prism.svg');
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .game-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .horse {
+            width: 100%;
+            height: auto;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: left;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .food-option {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .food-option img {
+            width: 80px;
+            height: 80px;
+        }
+        .food-option:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Игра: Уход за Лошадью</h1>
+    <div class="game-container">
+        <img src="../ima/36318c49-b0f9-4d29-be2f-d995cff6e4dc.jfif" alt="Лошадь" id="horseImage" class="horse">
+        <div class="buttons">
+            <button class="button" onclick="showFeedOptions()">Покормить</button>
+            <button class="button" onclick="brushHorse()">Почистить</button>
+            <button class="button" onclick="playWithHorse()">Поиграть</button>
+        </div>
+        <div class="status" id="status">Лошадь ждёт вашего внимания!</div>
+    </div>
+
+    <div id="feedModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Чем покормить лошадь?</h2>
+            <div class="food-option" onclick="feedHorse('сено')">
+                <img src="../ima/hay-straw-dry-wallpaper.jpg" alt="Сено">
+                <p>Сено</p>
+            </div>
+            <div class="food-option" onclick="feedHorse('морковь')">
+                <img src="../ima/d6ecc4d4380911ec988200505689c502_01693fbc380a11ec988200505689c502.jpg" alt="Морковь">
+                <p>Морковь</p>
+            </div>
+            <div class="food-option" onclick="feedHorse('отруби')">
+                <img src="../ima/Bran.jpg" alt="Отруби">
+                <p>Отруби</p>
+            </div>
+            <div class="food-option" onclick="feedHorse('яблоки')">
+                <img src="../ima/1662040170_j-50.jpg" alt="Яблоки">
+                <p>Яблоки</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+        }
+
+        function updateHorseImage(src) {
+            const horseImage = document.getElementById('horseImage');
+            horseImage.src = src;
+        }
+
+        function showFeedOptions() {
+            document.getElementById('feedModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('feedModal').style.display = 'none';
+        }
+
+        function feedHorse(food) {
+            closeModal();
+            switch(food) {
+                case 'сено':
+                    updateStatus('Лошадка сейчас не хочет сена.');
+                    updateHorseImage('../ima/0fff664b-95fc-4f32-a627-f1beae6a7ea4.jfif');
+                    break;
+                case 'морковь':
+                    updateStatus('Лошадка очень сильно довольна, ждёт добавки!');
+                    updateHorseImage('../ima/d2f154ea-74dd-4c7d-9328-6ba36ea37764.jfif');
+                    break;
+                case 'отруби':
+                    updateStatus('Лошадка отвернулась от вас.');
+                    updateHorseImage('../ima/07be24b9-15f4-4604-b085-e83297258cac.jfif');
+                    break;
+                case 'яблоки':
+                    updateStatus('Мордашка счастлива!');
+                    updateHorseImage('../ima/60fa86bc-a32f-40ee-9d9e-0f83cdf3cbd1.jfif');
+                    break;
+            }
+        }
+
+        function brushHorse() {
+            updateStatus('Вы почистили лошадь. Она выглядит здоровой!');
+            updateHorseImage('../ima/5226ea15-9f3c-4b14-aa14-ee05cef09c3a.jfif');
+        }
+
+        function playWithHorse() {
+            updateStatus('Вы поиграли с лошадью. Она счастлива!');
+            updateHorseImage('../ima/c26f1d84-d712-4e8a-8a8f-764547fcf1ea.jfif');
+        }
+
+        // Закрыть модальное окно при клике вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('feedModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

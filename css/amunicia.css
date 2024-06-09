@@ -1,0 +1,400 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+    }
+
+
+/* Общие стили для шапки */
+header {
+    background-color: #ffffff; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Расположение элементов в строку */
+    justify-content: space-between; /* Выравнивание элементов по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+/* Стили для логотипа */
+.logo {
+    font-size: 24px; /* Размер шрифта логотипа */
+    font-weight: bold; /* Полужирный шрифт */
+    font-family: 'Arial Black', sans-serif; /* Красивый шрифт */
+    color: #000000; /* Цвет текста */
+    
+}
+
+/* Стили для навигационного меню */
+nav ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    display: flex; /* Расположение элементов в строку */
+    padding: 35px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+nav ul li {
+    margin-right: 20px; /* Внешний отступ между пунктами меню */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Убираем внешний отступ у последнего пункта меню */
+}
+
+nav ul li a {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+/* Стили для номера телефона */
+.phone-number {
+    font-weight: bold; /* Полужирный шрифт */
+}
+
+
+
+
+
+/* Контейнер 1*/
+
+:root {
+--overlay-color: rgba(0, 0, 0, 0.5); /* Цвет затемнения */
+--text-color: rgba(255, 255, 255, 0.7); /* Цвет текста */
+--square-opacity: 0.6; /* Прозрачность квадрата */
+}
+
+.container {
+    height: 100%; /* задаем абсолютную высоту */
+    width: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-image:  linear-gradient(rgba(54, 55, 56, 0.3), #000000f2),  url('../ima/33.jpg'); /* Путь к вашему изображению */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* чтобы слой с затемнением не выходил за пределы контейнера */
+    }
+    canvas{
+        filter: blur(1px);
+      }
+   
+.content {
+position: absolute;
+
+padding: 20px;
+text-align: center;
+color: #000000; /* Цвет текста */
+max-width: 80%; /* Ширина контейнера */
+word-wrap: break-word; /* Автоматический перенос слов */
+}
+.square {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 1600%; /* Ширина квадрата */
+height: 1600%; /* Высота квадрата */
+background-color: rgba(255, 255, 255,0.6); /* Полупрозрачный белый цвет квадрата */
+}
+h1 {
+    margin-top: 30px; /* Отступ сверху для h2 и h3 */
+    font-size: 16px; /* Меньший размер шрифта для h1 */
+    font-family: 'Playfair Display', serif; /* Красивый шрифт */
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    color: transparent;
+    margin-bottom: 20px; /* Отступ снизу для h1 */
+}
+
+h2 {
+    margin-top: 100px; /* Отступ сверху для h2 и h3 */
+    font-size: 50px; /* Меньший размер шрифта для h1 */
+    font-family: 'Playfair Display', serif; /* Красивый шрифт */
+    color: #000000; /* Цвет красного для h1 */
+
+
+
+}
+
+
+h3 {
+    margin-top: 20px; /* Отступ сверху для h2 и h3 */
+    font-size: 30px; /* Меньший размер шрифта для h1 */
+    font-family: 'Playfair Display', serif; /* Красивый шрифт */
+    color: #000000; /* Цвет красного для h1 */
+    line-height: 1.5; /* Межстрочный интервал для h3 */
+    font-weight: normal; /* Убираем жирность */
+    padding: 0 20px; /* Отступы слева и справа */
+
+}
+
+
+
+
+
+.text-block {
+        height:60%; /* задаем абсолютную высоту */
+        text-align: center;
+        font-size: 1.7em;
+        font-family: 'Georgia', serif;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.65;
+        position: relative;
+        padding: 0% 20%; /* Большие расстояния слева и справа */
+        margin: 20px;
+    }
+
+    .text-block p {
+        margin: 30px;
+        text-align: justify; /* Выравнивание текста по обоим краям */
+    }
+
+   
+    .slider-container {
+        position: relative;
+        width: 80%;
+        height: 100%; 
+        margin: 0 auto;
+        overflow: hidden; /* Добавляем скрытие содержимого за пределами контейнера */
+        aspect-ratio: 1/1; /* Устанавливаем соотношение сторон 1:1 для квадратного контейнера */
+        margin-bottom: 0; /* Убираем нижний отступ */
+    }
+    
+    .slider {
+        display: flex;
+        overflow: hidden;
+        aspect-ratio: 1/1; /* Устанавливаем соотношение сторон 1:1 для квадратного слайдера */
+        margin-bottom: 0; /* Убираем нижний отступ */
+    }
+    
+    .slide {
+        position: relative;
+        width: 100%;
+        display: none;
+        margin-bottom: 0;
+    }
+    .slide.active {
+        display: flex; /* отображаем активный слайд */
+    }
+
+    .slide img {
+        width: 45%; /* Ширина изображения будет составлять половину ширины слайда */
+        height: auto; /* Автоматическая высота, чтобы сохранить пропорции изображения */
+        object-fit: contain; /* Масштабирование изображения, чтобы оно полностью помещалось в слайд */
+        position: absolute; /* Абсолютное позиционирование */
+        top: 0; /* Размещаем изображение вверху слайда */
+        left: 0; /* Размещаем изображение в левом краю слайда */
+        margin-bottom: 0; /* Убираем нижний отступ */
+    }
+    
+    .slide-content {
+        position: absolute; /* Абсолютное позиционирование */
+        top: 0; /* Размещаем контент вверху слайда */
+        right: 0; /* Размещаем контент в правом краю слайда */
+        width: 50%; /* Ширина контента будет равна половине ширины слайда */
+        padding: 20px; /* Внутренние отступы контента */
+        box-sizing: border-box; /* Учитываем отступы в общей ширине элемента */
+        background-color: rgba(255, 255, 255, 0.8); /* Задаем полупрозрачный фон для контента */
+        margin-top: -40px; /* Пример отрицательного отступа для поднятия текста */
+        margin-bottom: 0; /* Убираем нижний отступ для контента слайда */
+    }
+    
+    .slide-content p {
+        text-indent: 2em; 
+        font-family: 'Roboto', sans-serif; /* Установка другого шрифта для основного текста */
+        font-size: 19px; /* Увеличиваем размер текста до 18 пикселей */
+        margin-bottom: 0.4em !important;/* Уменьшаем межабзацный интервал */
+        line-height: 1.7; /* Больший интервал между строками */
+    }
+    .slide-content ul {
+        text-indent: 2em; 
+        font-family: 'Roboto', sans-serif; /* Установка другого шрифта для основного текста */
+        font-size: 19px; /* Увеличиваем размер текста до 18 пикселей */
+        margin-bottom: 0.4em !important;/* Уменьшаем межабзацный интервал */
+        line-height: 1.7; /* Больший интервал между строками */
+    }
+    .color-underline {
+        position: relative;
+
+    }
+    
+    .color-underline::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        border-bottom: 4px solid blue; 
+        z-index: -1;
+    }
+
+
+    
+    .prev-slide {
+        position: absolute;
+        top: 250px;
+        left: 20px; /* Отступ слева */
+        transform: translateY(-50%);
+        background-color: rgba(223, 150, 150, 0.7);
+        border: none;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        color: #290f0f;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .next-slide {
+        position: absolute;
+        top: 250px;
+        right: 20px; /* Отступ справа */
+        transform: translateY(-50%);
+        background-color: rgba(231, 151, 151, 0.7);
+        border: none;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        color: #3d1919;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .prev-slide:hover,
+    .next-slide:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    
+    
+    .text-block1 {
+        height:400px; /* задаем абсолютную высоту */
+        text-align: center;
+        font-size: 1.7em;
+        font-family: 'Georgia', serif;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.65;
+        position: relative;
+        padding: 0px 450px; /* Большие расстояния слева и справа */
+        margin: 20px;
+    }
+
+    .text-block1 p {
+        margin: 0px;
+        text-align: justify; /* Выравнивание текста по обоим краям */
+    }
+    /* Форма */
+
+    .container1 {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        background: linear-gradient(to right, #e1f3e2, #9ddada); 
+        padding: 20px;
+        border-radius: 10px; /* скругление углов */
+    }
+    select {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        appearance: none; /* отключение стандартного внешнего вида выпадающего списка */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent url('https://fonts.gstatic.com/s/i/materialiconsoutlined/keyboard_arrow_down/v10/24px.svg') no-repeat right; /* замена стандартной стрелочки на иконку */
+        background-size: 24px; /* размер иконки */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .response-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .response-text {
+        flex: 1;
+        text-align: left;
+        margin-right: 20px;
+        font-family: "Times New Roman", Times, serif; /* изменение шрифта */
+        font-size: 20px!important; /* изменение размера шрифта */
+        line-height: 1.5; /* изменение межстрочного интервала */
+    }
+
+    
+    .response-image {
+        flex: 1;
+        margin-left: auto; /* выравнивание фотографии по правому краю */
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .buy-button {
+        padding: 10px 20px;
+        background-color: #4CAF50; /* зеленый цвет */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    } 
+    
+   
+    footer {
+        background-color: black; /* Черный цвет фона */
+        color: white; /* Белый цвет текста */
+        padding: 20px; /* Внутренние отступы */
+        display: flex; /* Расположение элементов в строку */
+        align-items: center; /* Выравнивание элементов по вертикали */
+        justify-content: center; /* Выравнивание элементов по горизонтали по центру */
+        border: 4px solid black; /* Черная рамка толщиной 4 пикселя */
+        margin-right: 20px;
+    }
+
+    /* Текстовый логотип */
+    .logo1 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: auto; /* Размещение логотипа в левой части подвала */
+        color: white; /* Белый цвет текста */
+        text-decoration: none;
+
+    }
+
+    /* Кнопки-картинки */
+    .button {
+        width: 80px; /* Ширина кнопок */
+        height: 80px; /* Высота кнопок */
+        margin: 0 10px; /* Внешние отступы между кнопками */
+        background-color: transparent; /* Прозрачный фон */
+        border: none; /* Убираем границу */
+        cursor: pointer; /* Изменяем курсор при наведении */
+        margin-right: 20px;
+    }
+
+
+    /* Кнопка для возврата наверх страницы */
+    .back-to-top {
+        margin-left: auto; /* Размещение кнопки в правой части подвала */
+        background-color: transparent; /* Прозрачный фон */
+        border: none; /* Убираем границу */
+        cursor: pointer; /* Изменяем курсор при наведении */
+        padding: 0; /* Убираем внутренние отступы */
+    }
+
+    /* Стили для изображения кнопки */
+    .back-to-top img {
+        width: 50px; /* Уменьшаем ширину изображения */
+        height: 50px; /* Уменьшаем высоту изображения */
+    }
